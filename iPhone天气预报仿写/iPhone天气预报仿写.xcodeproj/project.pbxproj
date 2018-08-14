@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		188B7BA52121AE3F008E657F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B7BA42121AE3F008E657F /* AppDelegate.m */; };
+		188B7BAB2121AE3F008E657F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B7BA92121AE3F008E657F /* Main.storyboard */; };
+		188B7BAD2121AE4B008E657F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188B7BAC2121AE4B008E657F /* Assets.xcassets */; };
+		188B7BB02121AE4B008E657F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B7BAE2121AE4B008E657F /* LaunchScreen.storyboard */; };
+		188B7BB32121AE4B008E657F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B7BB22121AE4B008E657F /* main.m */; };
+		188B7BC22121AFDE008E657F /* CityNameManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B7BC12121AFDD008E657F /* CityNameManageViewController.m */; };
+		188B7BC52121B141008E657F /* CityNameManageBackGroundView.png in Resources */ = {isa = PBXBuildFile; fileRef = 188B7BC42121B141008E657F /* CityNameManageBackGroundView.png */; };
+		188B7BC72121BA01008E657F /* CityNameManageAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = 188B7BC62121BA01008E657F /* CityNameManageAdd.png */; };
+		18CE5C122122638D00D91EFF /* e7a4a9477308cd4d4261ac4ef327273b.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CE5C112122638D00D91EFF /* e7a4a9477308cd4d4261ac4ef327273b.png */; };
+		18CE5C142122681B00D91EFF /* 0ad7e45311636e68c008288bf593e0df.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CE5C132122681B00D91EFF /* 0ad7e45311636e68c008288bf593e0df.jpg */; };
+		18CE5C1721226FD500D91EFF /* JKWBriefCityWeatherNSO.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5C1621226FD500D91EFF /* JKWBriefCityWeatherNSO.m */; };
+		18CE5C1A21227B9A00D91EFF /* AddAndSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE5C1921227B9A00D91EFF /* AddAndSearchViewController.m */; };
+		18CE5C1C21227DCC00D91EFF /* 1ac800cbd039f7fc3e9960941f417925.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CE5C1B21227DCC00D91EFF /* 1ac800cbd039f7fc3e9960941f417925.jpg */; };
+		18CE5C1E21227E9900D91EFF /* f5949a32d5c0fa913d70ed0694b00d4b (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CE5C1D21227E9900D91EFF /* f5949a32d5c0fa913d70ed0694b00d4b (1).jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		188B7BA02121AE3F008E657F /* iPhone天气预报仿写.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPhone天气预报仿写.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		188B7BA32121AE3F008E657F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		188B7BA42121AE3F008E657F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		188B7BAA2121AE3F008E657F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		188B7BAC2121AE4B008E657F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		188B7BAF2121AE4B008E657F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		188B7BB12121AE4B008E657F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		188B7BB22121AE4B008E657F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		188B7BC02121AFDD008E657F /* CityNameManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityNameManageViewController.h; sourceTree = "<group>"; };
+		188B7BC12121AFDD008E657F /* CityNameManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityNameManageViewController.m; sourceTree = "<group>"; };
+		188B7BC42121B141008E657F /* CityNameManageBackGroundView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CityNameManageBackGroundView.png; sourceTree = "<group>"; };
+		188B7BC62121BA01008E657F /* CityNameManageAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CityNameManageAdd.png; sourceTree = "<group>"; };
+		18CE5C112122638D00D91EFF /* e7a4a9477308cd4d4261ac4ef327273b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = e7a4a9477308cd4d4261ac4ef327273b.png; sourceTree = "<group>"; };
+		18CE5C132122681B00D91EFF /* 0ad7e45311636e68c008288bf593e0df.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0ad7e45311636e68c008288bf593e0df.jpg; sourceTree = "<group>"; };
+		18CE5C1521226FD500D91EFF /* JKWBriefCityWeatherNSO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWBriefCityWeatherNSO.h; sourceTree = "<group>"; };
+		18CE5C1621226FD500D91EFF /* JKWBriefCityWeatherNSO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWBriefCityWeatherNSO.m; sourceTree = "<group>"; };
+		18CE5C1821227B9A00D91EFF /* AddAndSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddAndSearchViewController.h; sourceTree = "<group>"; };
+		18CE5C1921227B9A00D91EFF /* AddAndSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddAndSearchViewController.m; sourceTree = "<group>"; };
+		18CE5C1B21227DCC00D91EFF /* 1ac800cbd039f7fc3e9960941f417925.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1ac800cbd039f7fc3e9960941f417925.jpg; sourceTree = "<group>"; };
+		18CE5C1D21227E9900D91EFF /* f5949a32d5c0fa913d70ed0694b00d4b (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "f5949a32d5c0fa913d70ed0694b00d4b (1).jpg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		188B7B9D2121AE3F008E657F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		188B7B972121AE3F008E657F = {
+			isa = PBXGroup;
+			children = (
+				188B7BC32121B11C008E657F /* 素材 */,
+				188B7BA22121AE3F008E657F /* iPhone天气预报仿写 */,
+				188B7BA12121AE3F008E657F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		188B7BA12121AE3F008E657F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				188B7BA02121AE3F008E657F /* iPhone天气预报仿写.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		188B7BA22121AE3F008E657F /* iPhone天气预报仿写 */ = {
+			isa = PBXGroup;
+			children = (
+				188B7BBD2121AF37008E657F /* 数据通用 */,
+				188B7BB92121AF37008E657F /* UI界面 */,
+				188B7BA32121AE3F008E657F /* AppDelegate.h */,
+				188B7BA42121AE3F008E657F /* AppDelegate.m */,
+				188B7BA92121AE3F008E657F /* Main.storyboard */,
+				188B7BAC2121AE4B008E657F /* Assets.xcassets */,
+				188B7BAE2121AE4B008E657F /* LaunchScreen.storyboard */,
+				188B7BB12121AE4B008E657F /* Info.plist */,
+				188B7BB22121AE4B008E657F /* main.m */,
+			);
+			path = "iPhone天气预报仿写";
+			sourceTree = "<group>";
+		};
+		188B7BB92121AF37008E657F /* UI界面 */ = {
+			isa = PBXGroup;
+			children = (
+				188B7BBA2121AF37008E657F /* 城市管理界面 */,
+				188B7BBB2121AF37008E657F /* 增加城市界面 */,
+				188B7BBC2121AF37008E657F /* 天气情况 */,
+			);
+			path = "UI界面";
+			sourceTree = SOURCE_ROOT;
+		};
+		188B7BBA2121AF37008E657F /* 城市管理界面 */ = {
+			isa = PBXGroup;
+			children = (
+				188B7BC02121AFDD008E657F /* CityNameManageViewController.h */,
+				188B7BC12121AFDD008E657F /* CityNameManageViewController.m */,
+			);
+			path = "城市管理界面";
+			sourceTree = "<group>";
+		};
+		188B7BBB2121AF37008E657F /* 增加城市界面 */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5C1821227B9A00D91EFF /* AddAndSearchViewController.h */,
+				18CE5C1921227B9A00D91EFF /* AddAndSearchViewController.m */,
+			);
+			path = "增加城市界面";
+			sourceTree = "<group>";
+		};
+		188B7BBC2121AF37008E657F /* 天气情况 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "天气情况";
+			sourceTree = "<group>";
+		};
+		188B7BBD2121AF37008E657F /* 数据通用 */ = {
+			isa = PBXGroup;
+			children = (
+				188B7BBE2121AF37008E657F /* 缩略城市天气 */,
+				188B7BBF2121AF37008E657F /* 详细城市天气 */,
+			);
+			path = "数据通用";
+			sourceTree = SOURCE_ROOT;
+		};
+		188B7BBE2121AF37008E657F /* 缩略城市天气 */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5C1521226FD500D91EFF /* JKWBriefCityWeatherNSO.h */,
+				18CE5C1621226FD500D91EFF /* JKWBriefCityWeatherNSO.m */,
+			);
+			path = "缩略城市天气";
+			sourceTree = "<group>";
+		};
+		188B7BBF2121AF37008E657F /* 详细城市天气 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "详细城市天气";
+			sourceTree = "<group>";
+		};
+		188B7BC32121B11C008E657F /* 素材 */ = {
+			isa = PBXGroup;
+			children = (
+				18CE5C1D21227E9900D91EFF /* f5949a32d5c0fa913d70ed0694b00d4b (1).jpg */,
+				18CE5C1B21227DCC00D91EFF /* 1ac800cbd039f7fc3e9960941f417925.jpg */,
+				18CE5C132122681B00D91EFF /* 0ad7e45311636e68c008288bf593e0df.jpg */,
+				18CE5C112122638D00D91EFF /* e7a4a9477308cd4d4261ac4ef327273b.png */,
+				188B7BC42121B141008E657F /* CityNameManageBackGroundView.png */,
+				188B7BC62121BA01008E657F /* CityNameManageAdd.png */,
+			);
+			path = "素材";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		188B7B9F2121AE3F008E657F /* iPhone天气预报仿写 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 188B7BB62121AE4B008E657F /* Build configuration list for PBXNativeTarget "iPhone天气预报仿写" */;
+			buildPhases = (
+				188B7B9C2121AE3F008E657F /* Sources */,
+				188B7B9D2121AE3F008E657F /* Frameworks */,
+				188B7B9E2121AE3F008E657F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iPhone天气预报仿写";
+			productName = "iPhone天气预报仿写";
+			productReference = 188B7BA02121AE3F008E657F /* iPhone天气预报仿写.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		188B7B982121AE3F008E657F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "姜凯文";
+				TargetAttributes = {
+					188B7B9F2121AE3F008E657F = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 188B7B9B2121AE3F008E657F /* Build configuration list for PBXProject "iPhone天气预报仿写" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 188B7B972121AE3F008E657F;
+			productRefGroup = 188B7BA12121AE3F008E657F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				188B7B9F2121AE3F008E657F /* iPhone天气预报仿写 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		188B7B9E2121AE3F008E657F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CE5C1E21227E9900D91EFF /* f5949a32d5c0fa913d70ed0694b00d4b (1).jpg in Resources */,
+				188B7BB02121AE4B008E657F /* LaunchScreen.storyboard in Resources */,
+				188B7BC52121B141008E657F /* CityNameManageBackGroundView.png in Resources */,
+				18CE5C142122681B00D91EFF /* 0ad7e45311636e68c008288bf593e0df.jpg in Resources */,
+				18CE5C1C21227DCC00D91EFF /* 1ac800cbd039f7fc3e9960941f417925.jpg in Resources */,
+				188B7BAD2121AE4B008E657F /* Assets.xcassets in Resources */,
+				188B7BAB2121AE3F008E657F /* Main.storyboard in Resources */,
+				18CE5C122122638D00D91EFF /* e7a4a9477308cd4d4261ac4ef327273b.png in Resources */,
+				188B7BC72121BA01008E657F /* CityNameManageAdd.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		188B7B9C2121AE3F008E657F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18CE5C1721226FD500D91EFF /* JKWBriefCityWeatherNSO.m in Sources */,
+				188B7BB32121AE4B008E657F /* main.m in Sources */,
+				188B7BC22121AFDE008E657F /* CityNameManageViewController.m in Sources */,
+				188B7BA52121AE3F008E657F /* AppDelegate.m in Sources */,
+				18CE5C1A21227B9A00D91EFF /* AddAndSearchViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		188B7BA92121AE3F008E657F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				188B7BAA2121AE3F008E657F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		188B7BAE2121AE4B008E657F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				188B7BAF2121AE4B008E657F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		188B7BB42121AE4B008E657F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		188B7BB52121AE4B008E657F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		188B7BB72121AE4B008E657F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iPhone天气预报仿写/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jkw.iPhone------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		188B7BB82121AE4B008E657F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iPhone天气预报仿写/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jkw.iPhone------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		188B7B9B2121AE3F008E657F /* Build configuration list for PBXProject "iPhone天气预报仿写" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188B7BB42121AE4B008E657F /* Debug */,
+				188B7BB52121AE4B008E657F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		188B7BB62121AE4B008E657F /* Build configuration list for PBXNativeTarget "iPhone天气预报仿写" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188B7BB72121AE4B008E657F /* Debug */,
+				188B7BB82121AE4B008E657F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 188B7B982121AE3F008E657F /* Project object */;
+}
