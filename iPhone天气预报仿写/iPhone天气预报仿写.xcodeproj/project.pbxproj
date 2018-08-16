@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1824480921245FB900576B79 /* DetailedWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824480821245FB900576B79 /* DetailedWeatherViewController.m */; };
+		1824480C2124602600576B79 /* JKWWeekWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824480B2124602600576B79 /* JKWWeekWeatherView.m */; };
+		1824480F2124606500576B79 /* JKWWhiteLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1824480E2124606500576B79 /* JKWWhiteLabel.m */; };
+		182448122124610500576B79 /* JKWEveryDayDetailedWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182448112124610500576B79 /* JKWEveryDayDetailedWeatherView.m */; };
+		182448152124618300576B79 /* JKWAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182448142124618300576B79 /* JKWAddressTableViewCell.m */; };
+		18244818212461FB00576B79 /* JKWDetailedWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18244817212461FB00576B79 /* JKWDetailedWeatherView.m */; };
+		1824481D2124673B00576B79 /* cccfa962703f398d390dd810d18d1e9d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 182448192124673A00576B79 /* cccfa962703f398d390dd810d18d1e9d.jpg */; };
+		1824481E2124673B00576B79 /* 100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824481A2124673A00576B79 /* 100.png */; };
+		1824481F2124673B00576B79 /* 100n.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824481B2124673B00576B79 /* 100n.png */; };
+		182448202124673B00576B79 /* 按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 1824481C2124673B00576B79 /* 按钮.png */; };
 		188B7BA52121AE3F008E657F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B7BA42121AE3F008E657F /* AppDelegate.m */; };
 		188B7BAB2121AE3F008E657F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188B7BA92121AE3F008E657F /* Main.storyboard */; };
 		188B7BAD2121AE4B008E657F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188B7BAC2121AE4B008E657F /* Assets.xcassets */; };
@@ -24,6 +34,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1824480721245FB900576B79 /* DetailedWeatherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailedWeatherViewController.h; sourceTree = "<group>"; };
+		1824480821245FB900576B79 /* DetailedWeatherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailedWeatherViewController.m; sourceTree = "<group>"; };
+		1824480A2124602600576B79 /* JKWWeekWeatherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWWeekWeatherView.h; sourceTree = "<group>"; };
+		1824480B2124602600576B79 /* JKWWeekWeatherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWWeekWeatherView.m; sourceTree = "<group>"; };
+		1824480D2124606500576B79 /* JKWWhiteLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWWhiteLabel.h; sourceTree = "<group>"; };
+		1824480E2124606500576B79 /* JKWWhiteLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWWhiteLabel.m; sourceTree = "<group>"; };
+		182448102124610500576B79 /* JKWEveryDayDetailedWeatherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWEveryDayDetailedWeatherView.h; sourceTree = "<group>"; };
+		182448112124610500576B79 /* JKWEveryDayDetailedWeatherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWEveryDayDetailedWeatherView.m; sourceTree = "<group>"; };
+		182448132124618300576B79 /* JKWAddressTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWAddressTableViewCell.h; sourceTree = "<group>"; };
+		182448142124618300576B79 /* JKWAddressTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWAddressTableViewCell.m; sourceTree = "<group>"; };
+		18244816212461FB00576B79 /* JKWDetailedWeatherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKWDetailedWeatherView.h; sourceTree = "<group>"; };
+		18244817212461FB00576B79 /* JKWDetailedWeatherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKWDetailedWeatherView.m; sourceTree = "<group>"; };
+		182448192124673A00576B79 /* cccfa962703f398d390dd810d18d1e9d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cccfa962703f398d390dd810d18d1e9d.jpg; sourceTree = "<group>"; };
+		1824481A2124673A00576B79 /* 100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100.png; sourceTree = "<group>"; };
+		1824481B2124673B00576B79 /* 100n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100n.png; sourceTree = "<group>"; };
+		1824481C2124673B00576B79 /* 按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮.png"; sourceTree = "<group>"; };
 		188B7BA02121AE3F008E657F /* iPhone天气预报仿写.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iPhone天气预报仿写.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		188B7BA32121AE3F008E657F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		188B7BA42121AE3F008E657F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +147,18 @@
 		188B7BBC2121AF37008E657F /* 天气情况 */ = {
 			isa = PBXGroup;
 			children = (
+				1824480721245FB900576B79 /* DetailedWeatherViewController.h */,
+				1824480821245FB900576B79 /* DetailedWeatherViewController.m */,
+				1824480A2124602600576B79 /* JKWWeekWeatherView.h */,
+				1824480B2124602600576B79 /* JKWWeekWeatherView.m */,
+				1824480D2124606500576B79 /* JKWWhiteLabel.h */,
+				1824480E2124606500576B79 /* JKWWhiteLabel.m */,
+				182448102124610500576B79 /* JKWEveryDayDetailedWeatherView.h */,
+				182448112124610500576B79 /* JKWEveryDayDetailedWeatherView.m */,
+				182448132124618300576B79 /* JKWAddressTableViewCell.h */,
+				182448142124618300576B79 /* JKWAddressTableViewCell.m */,
+				18244816212461FB00576B79 /* JKWDetailedWeatherView.h */,
+				18244817212461FB00576B79 /* JKWDetailedWeatherView.m */,
 			);
 			path = "天气情况";
 			sourceTree = "<group>";
@@ -153,6 +191,10 @@
 		188B7BC32121B11C008E657F /* 素材 */ = {
 			isa = PBXGroup;
 			children = (
+				1824481A2124673A00576B79 /* 100.png */,
+				1824481B2124673B00576B79 /* 100n.png */,
+				1824481C2124673B00576B79 /* 按钮.png */,
+				182448192124673A00576B79 /* cccfa962703f398d390dd810d18d1e9d.jpg */,
 				18CE5C1D21227E9900D91EFF /* f5949a32d5c0fa913d70ed0694b00d4b (1).jpg */,
 				18CE5C1B21227DCC00D91EFF /* 1ac800cbd039f7fc3e9960941f417925.jpg */,
 				18CE5C132122681B00D91EFF /* 0ad7e45311636e68c008288bf593e0df.jpg */,
@@ -220,15 +262,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182448202124673B00576B79 /* 按钮.png in Resources */,
 				18CE5C1E21227E9900D91EFF /* f5949a32d5c0fa913d70ed0694b00d4b (1).jpg in Resources */,
 				188B7BB02121AE4B008E657F /* LaunchScreen.storyboard in Resources */,
 				188B7BC52121B141008E657F /* CityNameManageBackGroundView.png in Resources */,
 				18CE5C142122681B00D91EFF /* 0ad7e45311636e68c008288bf593e0df.jpg in Resources */,
 				18CE5C1C21227DCC00D91EFF /* 1ac800cbd039f7fc3e9960941f417925.jpg in Resources */,
 				188B7BAD2121AE4B008E657F /* Assets.xcassets in Resources */,
+				1824481F2124673B00576B79 /* 100n.png in Resources */,
 				188B7BAB2121AE3F008E657F /* Main.storyboard in Resources */,
+				1824481E2124673B00576B79 /* 100.png in Resources */,
 				18CE5C122122638D00D91EFF /* e7a4a9477308cd4d4261ac4ef327273b.png in Resources */,
 				188B7BC72121BA01008E657F /* CityNameManageAdd.png in Resources */,
+				1824481D2124673B00576B79 /* cccfa962703f398d390dd810d18d1e9d.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,10 +286,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CE5C1721226FD500D91EFF /* JKWBriefCityWeatherNSO.m in Sources */,
+				182448152124618300576B79 /* JKWAddressTableViewCell.m in Sources */,
+				1824480921245FB900576B79 /* DetailedWeatherViewController.m in Sources */,
+				182448122124610500576B79 /* JKWEveryDayDetailedWeatherView.m in Sources */,
 				188B7BB32121AE4B008E657F /* main.m in Sources */,
 				188B7BC22121AFDE008E657F /* CityNameManageViewController.m in Sources */,
 				188B7BA52121AE3F008E657F /* AppDelegate.m in Sources */,
+				1824480C2124602600576B79 /* JKWWeekWeatherView.m in Sources */,
 				18CE5C1A21227B9A00D91EFF /* AddAndSearchViewController.m in Sources */,
+				18244818212461FB00576B79 /* JKWDetailedWeatherView.m in Sources */,
+				1824480F2124606500576B79 /* JKWWhiteLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

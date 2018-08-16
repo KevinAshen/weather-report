@@ -8,6 +8,7 @@
 
 #import "CityNameManageViewController.h"
 #import "AddAndSearchViewController.h"
+#import "DetailedWeatherViewController.h"
 #define JKWDeviceWidth [UIScreen mainScreen].bounds.size.width
 #define JKWDeviceHeight [UIScreen mainScreen].bounds.size.height
 
@@ -31,7 +32,6 @@
 //    self.view.alpha = 0.8;
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, JKWDeviceWidth, JKWDeviceHeight * 0.94) style:UITableViewStyleGrouped];
-    _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor clearColor];
@@ -125,6 +125,14 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DetailedWeatherViewController *detailedWeatherViewController = [[DetailedWeatherViewController alloc] init];
+    detailedWeatherViewController.count = indexPath.row;
+    detailedWeatherViewController.cityManageMut = _BriefCityWeatherMut;
+    //NSLog(@"--%lu--", detailedWeatherViewController.cityManageMut.count);
+    [self presentViewController:detailedWeatherViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

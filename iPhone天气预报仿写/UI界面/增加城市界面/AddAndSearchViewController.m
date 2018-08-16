@@ -47,6 +47,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self.view endEditing:YES];
     NSString *searchBarTextStr = searchBar.text;
+    JKWBriefCityWeatherNSO *tempBriefWeather = [[JKWBriefCityWeatherNSO alloc] init];
     NSString *testUrlStr = [NSString stringWithFormat:@"https://free-api.heweather.com/s6/weather/now?location=%@&key=0b32342eb6a14669a0ab16cfca9f1785", searchBarTextStr];
     testUrlStr = [testUrlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *testUrl = [NSURL URLWithString:testUrlStr];
@@ -57,8 +58,17 @@
             id obj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             self.testStatusStr = obj[@"HeWeather6"][0][@"status"];
             if (![self.testStatusStr isEqualToString:@"unknown city"]) {
-                self.cityTempStr = obj[@"HeWeather6"][0][@"now"][@"tmp"];
-                self.tempCityIDStr = obj[@"HeWeather6"][0][@"basic"][@"cid"];
+                tempBriefWeather.cityNameString = searchBarTextStr;
+                tempBriefWeather.tempString = obj[@"HeWeather6"][0][@"now"][@"tmp"];
+                tempBriefWeather.cityIDStr = obj[@"HeWeather6"][0][@"basic"][@"cid"];
+                tempBriefWeather.weatherInformationStr = obj[@"HeWeather6"][0][@"now"][@"cond_txt"];
+                tempBriefWeather.weatherIcon = obj[@"HeWeather6"][0][@"now"][@"cond_code"];
+                tempBriefWeather.waterPercentStr = obj[@"HeWeather6"][0][@"now"][@"hum"];
+                tempBriefWeather.windSpeedStr = obj[@"HeWeather6"][0][@"now"][@"wind_spd"];
+                tempBriefWeather.rainNumberStr = obj[@"HeWeather6"][0][@"now"][@"pcpn"];
+                tempBriefWeather.downStr = obj[@"HeWeather6"][0][@"now"][@"pres"];
+                tempBriefWeather.canSeeStr = obj[@"HeWeather6"][0][@"now"][@"vis"];
+                
             }
         }
         
@@ -69,13 +79,15 @@
                 [wrongAlertController addAction:returnAction];
                 [self presentViewController:wrongAlertController animated:YES completion:nil];
             } else {
-                JKWBriefCityWeatherNSO *tempJKWBriefCityWeatherNSO = [[JKWBriefCityWeatherNSO alloc] init];
-                tempJKWBriefCityWeatherNSO.cityNameString = searchBarTextStr;
-                tempJKWBriefCityWeatherNSO.tempString = self.cityTempStr;
-                tempJKWBriefCityWeatherNSO.cityIDStr = self.tempCityIDStr;
+//                //NSLog(@"%@",self.tempCityIDStr);
+//                JKWBriefCityWeatherNSO *tempJKWBriefCityWeatherNSO = [[JKWBriefCityWeatherNSO alloc] init];
+//                tempJKWBriefCityWeatherNSO.cityNameString = searchBarTextStr;
+//                tempJKWBriefCityWeatherNSO.tempString = self.cityTempStr;
+//                tempJKWBriefCityWeatherNSO.cityIDStr = self.tempCityIDStr;
+//               NSLog(@"44%@", tempJKWBriefCityWeatherNSO.cityNameString);
                 [self dismissViewControllerAnimated:YES completion:nil];
                 if ([self->_addAndSearchViewControllerDelegate respondsToSelector:@selector(passJKWBriefCityWeatherNSO:)]) {
-                    [self->_addAndSearchViewControllerDelegate passJKWBriefCityWeatherNSO:tempJKWBriefCityWeatherNSO];
+                    [self->_addAndSearchViewControllerDelegate passJKWBriefCityWeatherNSO:tempBriefWeather];
                 }
             }
         });
