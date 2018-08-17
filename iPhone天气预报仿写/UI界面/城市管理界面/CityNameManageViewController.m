@@ -75,6 +75,7 @@
         JKWBriefCityWeatherNSO *tempBriefCityWeatherNSO = [[JKWBriefCityWeatherNSO alloc] init];
         tempBriefCityWeatherNSO = _BriefCityWeatherMut[indexPath.row];
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.AMSymbol = @"上午";
         formatter.PMSymbol = @"下午";
@@ -92,14 +93,12 @@
         cityNameLabel.font = [UIFont boldSystemFontOfSize:25];
         [cell.contentView addSubview:cityNameLabel];
         
-        //self.view.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.7f];
         cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.55];
         cell.contentView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.55];
         cell.contentView.alpha = 0.5;
         
         UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(JKWDeviceWidth * 0.7, JKWDeviceHeight * 0.1175 * 0.1, JKWDeviceWidth * 0.15 * 2, JKWDeviceHeight * 0.1175 * 0.8)];
         tempLabel.text = [tempBriefCityWeatherNSO.tempString stringByAppendingString:@"℃"];
-        //tempLabel.text = tempBriefCityWeatherNSO.tempString;
     
         tempLabel.textColor = [UIColor whiteColor];
         tempLabel.font = [UIFont systemFontOfSize:45];
@@ -131,7 +130,6 @@
     DetailedWeatherViewController *detailedWeatherViewController = [[DetailedWeatherViewController alloc] init];
     detailedWeatherViewController.count = indexPath.row;
     detailedWeatherViewController.cityManageMut = _BriefCityWeatherMut;
-    //NSLog(@"--%lu--", detailedWeatherViewController.cityManageMut.count);
     [self presentViewController:detailedWeatherViewController animated:YES completion:nil];
 }
 

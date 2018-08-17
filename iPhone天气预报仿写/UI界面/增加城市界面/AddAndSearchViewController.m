@@ -48,7 +48,7 @@
     [self.view endEditing:YES];
     NSString *searchBarTextStr = searchBar.text;
     JKWBriefCityWeatherNSO *tempBriefWeather = [[JKWBriefCityWeatherNSO alloc] init];
-    NSString *testUrlStr = [NSString stringWithFormat:@"https://free-api.heweather.com/s6/weather/now?location=%@&key=0b32342eb6a14669a0ab16cfca9f1785", searchBarTextStr];
+    NSString *testUrlStr = [NSString stringWithFormat:@"https://free-api.heweather.com/s6/weather?location=%@&key=0b32342eb6a14669a0ab16cfca9f1785", searchBarTextStr];
     testUrlStr = [testUrlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *testUrl = [NSURL URLWithString:testUrlStr];
     NSURLRequest *testRequest = [NSURLRequest requestWithURL:testUrl];
@@ -58,6 +58,7 @@
             id obj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
             self.testStatusStr = obj[@"HeWeather6"][0][@"status"];
             if (![self.testStatusStr isEqualToString:@"unknown city"]) {
+                //NSLog(@"%@", obj);
                 tempBriefWeather.cityNameString = searchBarTextStr;
                 tempBriefWeather.tempString = obj[@"HeWeather6"][0][@"now"][@"tmp"];
                 tempBriefWeather.cityIDStr = obj[@"HeWeather6"][0][@"basic"][@"cid"];
@@ -69,6 +70,21 @@
                 tempBriefWeather.downStr = obj[@"HeWeather6"][0][@"now"][@"pres"];
                 tempBriefWeather.canSeeStr = obj[@"HeWeather6"][0][@"now"][@"vis"];
                 
+                tempBriefWeather.maxTempStr = obj[@"HeWeather6"][0][@"daily_forecast"][0][@"tmp_max"];
+                tempBriefWeather.minTempStr = obj[@"HeWeather6"][0][@"daily_forecast"][0][@"tmp_min"];
+                
+                tempBriefWeather.weekMaxTemp1 = obj[@"HeWeather6"][0][@"daily_forecast"][1][@"tmp_max"];
+                tempBriefWeather.weekMinTemp1 = obj[@"HeWeather6"][0][@"daily_forecast"][1][@"tmp_min"];
+                tempBriefWeather.weekWeatherIcon1 = obj[@"HeWeather6"][0][@"daily_forecast"][1][@"cond_code_d"];
+                
+                tempBriefWeather.weekMaxTemp2 = obj[@"HeWeather6"][0][@"daily_forecast"][2][@"tmp_max"];
+                tempBriefWeather.weekMinTemp2 = obj[@"HeWeather6"][0][@"daily_forecast"][2][@"tmp_min"];
+                tempBriefWeather.weekWeatherIcon2 = obj[@"HeWeather6"][0][@"daily_forecast"][2][@"cond_code_d"];
+                
+                tempBriefWeather.sunRiseTimeStr = obj[@"HeWeather6"][0][@"daily_forecast"][0][@"sr"];
+                tempBriefWeather.sunSetTimeStr = obj[@"HeWeather6"][0][@"daily_forecast"][0][@"ss"];
+                tempBriefWeather.rainHappenStr = obj[@"HeWeather6"][0][@"daily_forecast"][0][@"pop"];
+                tempBriefWeather.purpleStr = obj[@"HeWeather6"][0][@"daily_forecast"][0][@"uv_index"];
             }
         }
         
@@ -79,12 +95,6 @@
                 [wrongAlertController addAction:returnAction];
                 [self presentViewController:wrongAlertController animated:YES completion:nil];
             } else {
-//                //NSLog(@"%@",self.tempCityIDStr);
-//                JKWBriefCityWeatherNSO *tempJKWBriefCityWeatherNSO = [[JKWBriefCityWeatherNSO alloc] init];
-//                tempJKWBriefCityWeatherNSO.cityNameString = searchBarTextStr;
-//                tempJKWBriefCityWeatherNSO.tempString = self.cityTempStr;
-//                tempJKWBriefCityWeatherNSO.cityIDStr = self.tempCityIDStr;
-//               NSLog(@"44%@", tempJKWBriefCityWeatherNSO.cityNameString);
                 [self dismissViewControllerAnimated:YES completion:nil];
                 if ([self->_addAndSearchViewControllerDelegate respondsToSelector:@selector(passJKWBriefCityWeatherNSO:)]) {
                     [self->_addAndSearchViewControllerDelegate passJKWBriefCityWeatherNSO:tempBriefWeather];
@@ -93,6 +103,50 @@
         });
     }];
     [testDataTask resume];
+    
+    NSString *test1UrlStr = [NSString stringWithFormat:@"https://free-api.heweather.com/s6/air/now?location=%@&key=0b32342eb6a14669a0ab16cfca9f1785", searchBarTextStr];
+    test1UrlStr = [test1UrlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSURL *test1Url = [NSURL URLWithString:test1UrlStr];
+    NSURLRequest *test1Request = [NSURLRequest requestWithURL:test1Url];
+    NSURLSession *test1Session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *testDataTask1 = [test1Session dataTaskWithRequest:test1Request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error == nil) {
+            id obj1 = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            self.testStatusStr = obj1[@"HeWeather6"][0][@"status"];
+            if (![self.testStatusStr isEqualToString:@"unknown city"]) {
+                tempBriefWeather.airNumberStr = obj1[@"HeWeather6"][0][@"air_now_city"][@"aqi"];
+                tempBriefWeather.airGoodStr = obj1[@"HeWeather6"][0][@"air_now_city"][@"qlty"];
+                
+            }
+        } else {
+            NSLog(@"%@", error);
+        }
+        
+    }];
+    [testDataTask1 resume];
+    
+    NSString *test3UrlStr = [NSString stringWithFormat:@"https://api.jisuapi.com/weather/query?appkey=3261731f81589d75&city=%@", searchBarTextStr];
+    test3UrlStr = [test3UrlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSURL *test3Url = [NSURL URLWithString:test3UrlStr];
+    NSURLRequest *test3Request = [NSURLRequest requestWithURL:test3Url];
+    NSURLSession *test3Session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *testDataTask3 = [test3Session dataTaskWithRequest:test3Request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error == nil) {
+            id obj3 = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            tempBriefWeather.dayTimeMut = [[NSMutableArray alloc] init];
+            tempBriefWeather.dayTempStrMut = [[NSMutableArray alloc] init];
+            tempBriefWeather.dayWeatherIcon = [[NSMutableArray alloc] init];
+            for (int i = 0; i < 24; i++) {
+                [tempBriefWeather.dayTimeMut addObject:obj3[@"result"][@"hourly"][i][@"time"]];
+                [tempBriefWeather.dayWeatherIcon addObject:obj3[@"result"][@"hourly"][i][@"img"]];
+                [tempBriefWeather.dayTempStrMut addObject:obj3[@"result"][@"hourly"][i][@"temp"]];
+            }
+        } else {
+            NSLog(@"wrong");
+        }
+        
+    }];
+    [testDataTask3 resume];
 }
 
 - (void)didReceiveMemoryWarning {

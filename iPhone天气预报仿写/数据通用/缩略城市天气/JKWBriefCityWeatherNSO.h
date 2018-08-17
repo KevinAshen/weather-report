@@ -19,43 +19,16 @@
 @property (nonatomic, strong) NSString *weatherInformationStr;
 @property (nonatomic, strong) NSString *tempString;
 @property (nonatomic, strong) NSString *maxTempStr; // 3~10
-@property (nonatomic, strong) NSString *MinTempStr; // 3~10
+@property (nonatomic, strong) NSString *minTempStr; // 3~10
 
 //24小时播报
 //  @property (nonatomic, strong) NSString *tempString;
 @property (nonatomic, strong) NSString *weatherIcon;
 
-@property (nonatomic, strong) NSString *time1Str;
-@property (nonatomic, strong) NSString *tempString1;
-@property (nonatomic, strong) NSString *weatherIcon1;
+@property (nonatomic) NSMutableArray *dayTimeMut;
+@property (nonatomic) NSMutableArray *dayTempStrMut;
+@property (nonatomic) NSMutableArray *dayWeatherIcon;
 
-@property (nonatomic, strong) NSString *time2Str;
-@property (nonatomic, strong) NSString *tempString2;
-@property (nonatomic, strong) NSString *weatherIcon2;
-
-@property (nonatomic, strong) NSString *time3Str;
-@property (nonatomic, strong) NSString *tempString3;
-@property (nonatomic, strong) NSString *weatherIcon3;
-
-@property (nonatomic, strong) NSString *time4Str;
-@property (nonatomic, strong) NSString *tempString4;
-@property (nonatomic, strong) NSString *weatherIcon4;
-
-@property (nonatomic, strong) NSString *time5Str;
-@property (nonatomic, strong) NSString *tempString5;
-@property (nonatomic, strong) NSString *weatherIcon5;
-
-@property (nonatomic, strong) NSString *time6Str;
-@property (nonatomic, strong) NSString *tempString6;
-@property (nonatomic, strong) NSString *weatherIcon6;
-
-@property (nonatomic, strong) NSString *time7Str;
-@property (nonatomic, strong) NSString *tempString7;
-@property (nonatomic, strong) NSString *weatherIcon7;
-
-@property (nonatomic, strong) NSString *time8Str;
-@property (nonatomic, strong) NSString *tempString8;
-@property (nonatomic, strong) NSString *weatherIcon8;
 
 //一周播报
 @property (nonatomic, strong) NSString *weekWeatherIcon1;

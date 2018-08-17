@@ -8,6 +8,7 @@
 
 #import "DetailedWeatherViewController.h"
 #import "JKWDetailedWeatherView.h"
+#import "CityNameManageViewController.h"
 #define JKWDeviceWidth [UIScreen mainScreen].bounds.size.width
 #define JKWDeviceHeight [UIScreen mainScreen].bounds.size.height
 
@@ -33,9 +34,10 @@
     bottomView.alpha = 0.7;
     [self.view addSubview:bottomView];
     
-    UIButton *AddButton = [[UIButton alloc] initWithFrame:CGRectMake(JKWDeviceWidth * 0.9, JKWDeviceHeight * 0.06 * 0.15, JKWDeviceWidth * 0.1, JKWDeviceHeight * 0.06 * 0.8)];
-    [AddButton setImage:[UIImage imageNamed:@"按钮"] forState:UIControlStateNormal];
-    [bottomView addSubview:AddButton];
+    UIButton *ListButton = [[UIButton alloc] initWithFrame:CGRectMake(JKWDeviceWidth * 0.9, JKWDeviceHeight * 0.06 * 0.15, JKWDeviceWidth * 0.1, JKWDeviceHeight * 0.06 * 0.8)];
+    [ListButton setImage:[UIImage imageNamed:@"按钮"] forState:UIControlStateNormal];
+    [ListButton addTarget:self action:@selector(presentList) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView addSubview:ListButton];
     
     _cityPageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(JKWDeviceWidth * 0.3, JKWDeviceHeight * 0.06 * 0.15, JKWDeviceWidth * 0.4, JKWDeviceHeight * 0.06 * 0.8)];
     _cityPageControl.numberOfPages = _cityManageMut.count;
@@ -44,7 +46,7 @@
     _cityScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, JKWDeviceWidth, JKWDeviceHeight * 0.94)];
     _cityScrollView.alwaysBounceHorizontal = NO;
     _cityScrollView.alwaysBounceVertical = NO;
-    _cityScrollView.contentSize = CGSizeMake(0 + _cityManageMut.count,  JKWDeviceHeight * 0.94);
+    _cityScrollView.contentSize = CGSizeMake(0 + _cityManageMut.count * JKWDeviceWidth,  JKWDeviceHeight * 0.94);
     _cityScrollView.delegate = self;
     _cityScrollView.pagingEnabled = YES;
     _cityScrollView.scrollEnabled = YES;
@@ -55,16 +57,19 @@
     [_cityScrollView setContentOffset:CGPointMake(JKWDeviceWidth * _count, 0) animated:YES];
     
     for (int i = 0; i < _cityManageMut.count; i++) {
-        NSLog(@"&&");
         JKWDetailedWeatherView *detailedWeatherView = [[JKWDetailedWeatherView alloc] initWithFrame:CGRectMake(0 + i * JKWDeviceWidth, 0, JKWDeviceWidth, JKWDeviceHeight * 0.94)WithCityWeather:_cityManageMut[i]];
         [_cityScrollView addSubview:detailedWeatherView];
     }
     [self.view addSubview:_cityScrollView];
 }
 
+- (void) presentList {
+    //CityNameManageViewController *cityNameManageViewController = [[CityNameManageViewController alloc] init];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 //正在滚动的时候
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    //   (offset.x + 100/2)/100
     int page = (scrollView.contentOffset.x + scrollView.frame.size.width / 2)/ scrollView.frame.size.width;
     self.cityPageControl.currentPage = page;
 }

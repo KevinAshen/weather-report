@@ -36,7 +36,7 @@
 - (void) layoutSubviews {
     _cityWeekLabel.frame = CGRectMake(15, 10, 90, 30);
     
-    _weatherImageView.frame = CGRectMake(JKWDeviceWidth * 0.5 - 15, 10, 30, 30);
+    _weatherImageView.frame = CGRectMake(JKWDeviceWidth * 0.5 - 15, 5, 40, 40);
     
     _cityMaxLabel.frame = CGRectMake(JKWDeviceWidth - 15 - 30 - 20 - 30, 10, 30, 30);
     
